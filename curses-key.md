@@ -23,11 +23,11 @@ while True:
 	elif char == curses.KEY_RIGHT:
 		screen.addstr(0, 0, 'right')
 	elif char == curses.KEY_LEFT:
-    screen.addstr(0, 0, 'left ')
+		screen.addstr(0, 0, 'left ')
 	elif char == curses.KEY_UP:
 		screen.addstr(0, 0, 'up   ')
 	elif char == curses.KEY_DOWN:
-    screen.addstr(0, 0, 'down   ')
+		screen.addstr(0, 0, 'down   ')
 
 # shut down cleanly
 curses.nocbreak() 
