@@ -1,3 +1,5 @@
+# this file was originally called curse-key1.py
+
 import curses
  
 screen = curses.initscr()
