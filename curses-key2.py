@@ -1,3 +1,5 @@
+# this file was originally called curse-key2.py
+
 import curses
 import turtle
 
