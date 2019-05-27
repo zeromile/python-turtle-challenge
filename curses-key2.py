@@ -26,7 +26,7 @@ while True:
 		screen.addstr(0, 0, 'left ')
 	 	turtle.left(15)
 	elif char == curses.KEY_UP:
-		#screen.addstr(0, 0, 'up   ')
+		screen.addstr(0, 0, 'up   ')
 		turtle.forward(20)       
 	elif char == curses.KEY_DOWN:
 		screen.addstr(0, 0, 'down ')
