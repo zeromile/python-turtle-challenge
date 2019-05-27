@@ -1,4 +1,4 @@
-# installing and using the curses module #
+# Installing and using the curses module #
 ## Curses Test 1 ##
 
 At the Windows command prompt type the following 2 lines, follow each with the Enter key:
