@@ -6,8 +6,6 @@ Launch IDLE (Windows) and create a new Python file named `curses-key1.py`, save 
 In that file enter the following code:
 
 ~~~~
-# this file was originally called curse-key1.py
-
 import curses
  
 screen = curses.initscr()
@@ -47,8 +45,50 @@ Do a "save-as" of the curses-key1.py (or create a new file with the same name) t
 
 We are going to modify our code to use the arrow keys to control the turtle
 
-Modify your curses-key2.py code to look like the following code:
+Modify your curses-key2.py code to look like the following code; we are simply adding the turtle import and turtle control commands in the conditionals
 
 ~~~~
-code
+import curses
+import turtle
+
+# get the curses screen window
+screen = curses.initscr()
+ 
+# turn off input echoing
+curses.noecho()
+ 
+# respond to keys immediately (don't wait for enter)
+curses.cbreak()
+ 
+# map arrow keys to special values
+screen.keypad(True)
+
+while True:
+  char = screen.getch()
+	if char == ord('q'):
+		break
+	elif char == curses.KEY_RIGHT:
+		screen.addstr(0, 0, 'right')
+		turtle.right(15)
+	elif char == curses.KEY_LEFT:
+		screen.addstr(0, 0, 'left ')
+	 	turtle.left(15)
+	elif char == curses.KEY_UP:
+		screen.addstr(0, 0, 'up   ')
+		turtle.forward(20)       
+	elif char == curses.KEY_DOWN:
+		screen.addstr(0, 0, 'down ')
+
+# shut down cleanly
+curses.nocbreak() 
+screen.keypad(0) 
+curses.echo()
+curses.endwin()
 ~~~~
+
+
+## Curses Key 3 Challenge - This time with wrapper() ##
+
+Do a "save-as" of the curses-key2.py (or create a new file with the same name) to curses-key3.py
+
+We are going to modify our curses-key2.py code to use the python built-in wrapper
