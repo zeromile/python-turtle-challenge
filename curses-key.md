@@ -1,4 +1,4 @@
-# Using the curses module to read a single key #
+# Using the curses module to read keys without hitting enter #
 ## Curses Key 1 ##
 
 Launch IDLE (Windows) and create a new Python file named `curses-key1.py`, save it in your user folder (you'll have to navigate there...C:Drive->Users->YourUserName->)
@@ -39,7 +39,7 @@ To run you will have to go back to the Windows command prompt and type:
 
 You will get a blank screen and  nothing will happen until you press an arrow key; window should respond with the name of that arrow key.
 
-## Curses Key 2 - This time with turtle ##
+## Curses Key 2 - This time with Turtle ##
 
 Do a "save-as" of the curses-key1.py (or create a new file with the same name) to curses-key2.py
 
@@ -91,4 +91,4 @@ curses.endwin()
 
 Do a "save-as" of the curses-key2.py (or create a new file with the same name) to curses-key3.py
 
-We are going to modify our curses-key2.py code to use the python built-in wrapper
+We are going to modify our curses-key2.py code to use the python built-in wrapper, in a similar way that we did in the curses-test2.py file.
